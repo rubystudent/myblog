@@ -1,0 +1,4 @@
+= form_for :comment, url: user_article_comments_path(article_id: @article), method: :post do |form|
+  = form.text_field :text
+  br
+  = form.submit

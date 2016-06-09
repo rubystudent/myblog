@@ -1,0 +1,8 @@
+h1 Edit article
+= form_for :article,url: user_article_path,  method: :patch do |form|
+  = form.text_field :title, placeholder: 'Title'
+  br
+  = form.text_area :text, placeholder: 'What`s new?'
+  br
+  = form.submit
+= link_to 'Back', user_path(@current_user)

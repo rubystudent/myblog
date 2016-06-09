@@ -1,0 +1,15 @@
+div class="well"
+  =@user.first_name + ' ' +@user.last_name
+  #edit
+    = link_to 'Show ', user_article_path(@user,article)
+    = link_to 'Edit ', edit_user_article_path(@user,article)
+    = link_to 'Destroy', user_article_path(@user,article),
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' }
+  br
+  strong Title:
+  = article.title
+  br
+  strong Text:
+  = article.text
+

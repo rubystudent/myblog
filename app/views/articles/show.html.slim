@@ -1,0 +1,12 @@
+div class = "well"
+  strong Title:
+  = @article.title
+  br
+  strong Text:
+  = @article.text
+  br
+  br
+  = link_to 'Back', users_path(@current_user)
+div class = "well"
+  = render 'comments/form'
+  = render @article.comments

@@ -1,0 +1,10 @@
+=render 'form'
+-@articles.each do |article|
+  div class = "well"
+    = link_to "#{article.user.first_name} #{article.user.last_name}", user_path(article.user_id)
+    #edit
+      = link_to 'Show ', user_article_path(article.user_id,article)
+    br
+    strong = article.title
+    br
+    = article.text

@@ -1,0 +1,6 @@
+= form_for :article, url: user_articles_path(@current_user), method: :post do |form|
+  = form.text_field :title, placeholder: 'Title'
+  br
+  = form.text_area :text, placeholder: 'What`s new?'
+  br
+  = form.submit

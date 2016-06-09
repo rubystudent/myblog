@@ -1,0 +1,11 @@
+= form_for @user, url: users_path do |form|
+  = form.email_field :email, placeholder: 'Email'
+  br
+  = form.password_field :password, placeholder: 'Password'
+  br
+  = form.text_field :first_name, placeholder: 'First name'
+  br
+  = form.text_field :last_name, placeholder: 'Last name'
+  br
+  = form.submit
+  br
